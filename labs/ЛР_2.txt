@@ -1,0 +1,153 @@
+
+#include <iostream>
+#include <cmath>
+#include "stdio.h"
+
+
+using namespace std;
+
+int main()
+{
+
+    setlocale(LC_ALL,"russian");
+    std::cout << "Привет мир!\n";
+    
+    // Задача Integer1
+    
+    /*
+    int l, L;
+    cout << "Введите расстояние в сантиметрах L=";
+    cin >> L;
+    l = L / 100;
+    cout << "В расстоянии L, " << l  << " метров";
+    */
+    
+    // Задача Integer2
+    
+    /*
+    int m, M;
+    cout << "Введите массу в килограммах M=";
+    cin >> M;
+    m = M / 1000;
+    cout << "В массе M, " << m  << " тонн";    
+    */
+    
+    // Задача Integer3
+    
+    /*
+    int b, B;
+    cout << "Введите колчичество байт для вычисляемого файла B=";
+    cin >> B;
+    b = B / 1024;
+    cout << "В файле B, " << b  << " килобайт";    
+    */
+    
+    
+    // Задача Integer4
+    
+    /*
+    int  A, B, C;
+    cout << "Введите целое положительное число A=";
+    cin >> A;
+    
+    cout << "Введите целое положительное число B=";
+    cin >> B;
+    
+    C = A / B;
+    cout << "На отрезке A, может поместиться " << C << " целых отрезков B";   
+    */
+    
+    
+    // Задача Integer5
+    
+    /*
+    int  A, B, C;
+    cout << "Введите целое положительное число A=";
+    cin >> A;
+    
+    cout << "Введите целое положительное число B=";
+    cin >> B;
+    
+    C = A % B;
+    cout << "На отрезке A, не занятая часть от наложения целых отрезков B равна  " << C ;  
+    */
+    
+    
+    // Задача Integer6
+    
+    /*
+    int  A;
+    cout << "Введите двузначное число A=";
+    cin >> A;
+    
+    cout << "Первое число =" << A / 10  << " второе =" << A % 10;  
+    */
+    
+    // Задача Integer7
+    
+    /*
+    int  a, b, c, sum, proiz;
+    cout << "Введите двузначное число a=";
+    cin >> a;
+    
+    b = (a / 10);
+    c = (a % 10);
+    sum =  b + c;
+    
+    proiz = b * c;
+    cout << "Сумма его чисел =" <<  sum << ", а произведение его чисел =" << proiz;  
+    */
+    
+    
+    // Задача Integer8
+    
+    /*
+    int  a, new_a;
+    cout << "Введите двузначное число a=";
+    cin >> a;
+
+    new_a = (a % 10) * 10 + (a / 10);
+    cout << "Новое число =" << new_a;  
+    */
+    
+    // Задача Integer9
+    
+    /*
+    int  a, new_a;
+    cout << "Введите трехзначное число a=";
+    cin >> a;
+
+    new_a = a / 100;
+    cout << "Сотни для числа a=" << new_a;  
+    */
+    
+    
+    // Задача Integer10
+    /*
+    int  a, second_num_a, third_num_a;
+    cout << "Введите трехзначное число a=";
+    cin >> a;
+    
+    third_num_a = -1 * (a / 10 * 10 - a);
+    cout << "Последняя цифра числа =" << third_num_a;  
+    
+    second_num_a = (-1 * (a / 100 * 100 - a)) / 10;
+    cout << "\nВторая цифра числа =" << second_num_a;  
+    */
+    
+    
+    // Задача Integer11
+    
+    
+    int  a, second_num_a, third_num_a, firs_num_a, sum;
+    cout << "Введите трехзначное число a=";
+    cin >> a;
+
+    third_num_a = -1 * (a / 10 * 10 - a);
+    second_num_a = (-1 * (a / 100 * 100 - a)) / 10;
+    firs_num_a = a / 100 ;
+    
+    sum = second_num_a + third_num_a + firs_num_a;
+    cout << "Сумма чисел, числа a равна " << sum;
+    
+}
