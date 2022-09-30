@@ -10,7 +10,7 @@ int main() {
 
     // Boolean 1
     //Число A является положительным
-    
+
     /*
     int A;
     cout << "Введите целое число A=";
@@ -162,6 +162,8 @@ int main() {
 
     // Boolean 10
     // «Ровно одно из чисел A и B нечетное
+    // Предыдущий вариант bool Res = (A % 2) == (B % 2);
+
 
     /*
     int A, B;
@@ -171,36 +173,33 @@ int main() {
     cout << "Введите число B=";
     cin >> B;
 
-    bool Res = (A % 2) == (B % 2);
-    cout << "Результат = " << (Res ? "False" : "True") << endl;
-    system("pause");
-    */
-
-
-
-
-    // Boolean 11
-    //Числа A и B имеют одинаковую четность
-
-    /*
-    int A, B;
-
-    cout << "Введите число A=";
-    cin >> A;
-    cout << "Введите число B=";
-    cin >> B;
-
-    bool Res = (A % 2) == (B % 2);
+    bool Res = ((A % 2) && !(B % 2)) || (!(A % 2) && (B % 2));
     cout << "Результат = " << (Res ? "True" : "False") << endl;
     system("pause");
     */
 
 
+    // Boolean 11
+    // Числа A и B имеют одинаковую четность
+    // bool Res = (A % 2) == (B % 2);
+
+    /*
+    int A, B;
+
+    cout << "Введите число A=";
+    cin >> A;
+    cout << "Введите число B=";
+    cin >> B;
+
+    bool Res = (A % 2) && (B % 2) || !(A % 2) && !(B % 2);
+    cout << "Результат = " << (Res ? "True" : "False") << endl;
+    system("pause");
+    */
 
 
     // Boolean 12
     //Каждое из чисел A, B, C положительное
-    
+
     /*
     int A, B, C;
     cout << "Введите целое число A=";
@@ -244,6 +243,7 @@ int main() {
 
     // Boolean 14
     // Ровно одно из чисел A, B, C положительное
+    // Предыдущий вариант ((0 < A) + (0 < B) + (0 < C)) == 1;
 
     /*
     int A, B, C;
@@ -256,7 +256,7 @@ int main() {
     cout << "Введите целое число C=";
     cin >> C;
 
-    bool Res = ((0 < A) + (0 < B) + (0 < C)) == 1;
+    bool Res = (0 < A && 0 >= B && 0 >= C) || (0 >= A && 0 < B && 0 >= C) || (0 >= A && 0 >= B && 0 < C);
 
     cout << "Результат = " << (Res ? "True" : "False") << endl;
     system("pause");
@@ -265,8 +265,8 @@ int main() {
 
     // Boolean 15
     // Ровно два из чисел A, B, C являются положительными
-    
 
+    
     int A, B, C;
     cout << "Введите целое число A=";
     cin >> A;
@@ -277,7 +277,7 @@ int main() {
     cout << "Введите целое число C=";
     cin >> C;
 
-    bool Res = ((0 < A) + (0 < B) + (0 < C)) == 2;
+    bool Res = (0 < A && 0 < B && 0 >= C) || (0 < A && 0 >= B && 0 < C) || (0 >= A && 0 < B && 0 < C);
 
     cout << "Результат = " << (Res ? "True" : "False") << endl;
     system("pause");
