@@ -22,17 +22,11 @@ int main()
     cout << "Введите число h=";
     cin >> h;
 
-    if (v == 0) {
-        cout << "Переменная r не вычисляется\n";
-        system("pause");
-        
-    }
-    else {
-        r = (v * h + 1) / v + (pi * v * v);
-        x = (pi * r * r) - (v * v * sin(r));
+    r = (v * h + 1) / v + (pi * v * v);
+    x = (pi * r * r) - (v * v * sin(r));
 
-        cout << "\nЧисло r=" << r;
-        cout << "\nЧисло x=" << x << "\n";
-        system("pause");
-    }
+    cout << "\nЧисло r=" << r;
+    cout << "\nЧисло x=" << x << "\n";
+    system("pause");
+    
 }
