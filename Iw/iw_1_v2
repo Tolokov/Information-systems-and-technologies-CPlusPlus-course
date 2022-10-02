@@ -1,0 +1,24 @@
+#include <iostream>
+#include "stdio.h"
+#include <math.h> 
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "russian");
+    std::cout << "Вариант 29!\n";
+
+    float C, X, Y;
+    float const E = 2.718;
+
+    cout << "\nВведите число C=";
+    cin >> C;
+
+    X = pow(log(C * C), 2) - pow(1.3, 3);
+    Y = (pow(E, X)) + (pow(E, 2 * X) * sin(X));
+
+    cout << "\nЧисло X=" << X << "\nЧисло Y=" << Y << "\n";
+    system("pause");
+
+}
