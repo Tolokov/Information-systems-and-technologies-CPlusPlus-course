@@ -1,0 +1,324 @@
+
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+/*
+// Proc1.Описать процедуру PowerA3(A, B), вычисляющую третью степень 
+// числа A и возвращающую ее в переменной B(A — входной, B — выходной
+// параметр; оба параметра являются вещественными).С помощью этой
+// процедуры найти третьи степени пяти данных чисел
+
+float PowerA3(float a) {
+	float b;
+	b = a * a * a;
+	return b;
+}
+int main()
+{
+	setlocale(LC_ALL, "russian");
+	std::cout << "Привет мир!\n";
+
+	int a;
+	for (int i = 0; i < 6; i++) {
+		cout << "Введите число А =";
+		cin >> a;
+		a = PowerA3(a);
+		cout << "" << a << "\n";
+	}
+	system("pause");
+	return 0;
+}
+*/
+
+/*
+// Proc2. Описать процедуру PowerA234(A, B, C, D), вычисляющую вторую,
+// третью и четвертую степень числа A и возвращающую эти степени 
+// соответственно в переменных B, C и D(A — входной, B, C, D — выходные
+// параметры; все параметры являются вещественными). С помощью этой
+// процедуры найти вторую, третью и четвертую степень пяти данных чисел.
+
+
+int PowerA234(float A, float &B, float &C, float &D) {
+	B = A * A;
+	C = B * A;
+	D = C * A;
+	return B, C, D;
+}
+
+
+int main() {
+	setlocale(LC_ALL, "russian");
+	std::cout << "Привет мир!\n";
+
+	float a;
+	float B = 0 ,C = 0, D = 0;
+	for (int i = 0; i < 6; i++) {
+		cout << "Введите число А =";
+		cin >> a;
+		PowerA234(a, B, C, D);
+		cout << "" << B << ' ' << C << ' ' << D << ' ' << "\n";
+	}
+	system("pause");
+	return 0;
+}
+*/
+
+
+
+/*
+// Proc3. Описать процедуру Mean(X, Y, AMean, GMean), вычисляющую
+// среднее арифметическое AMean = (X + Y) / 2 и среднее геометрическое
+// GMean =√X·Y двух положительных чисел X и Y(X и Y — входные,
+// AMean и GMean — выходные параметры вещественного типа).С помощью
+// этой процедуры найти среднее арифметическое и среднее геометрическое
+// для пар(A, B), (A, C), (A, D), если даны A, B, C, D.
+
+
+
+int Mean(float X, float Y, float &AMean, float &GMean) {
+	AMean = (X + Y) / 2;
+	GMean = sqrt(X*Y);
+	return AMean, GMean;
+}
+
+
+int main() {
+	setlocale(LC_ALL, "russian");
+	std::cout << "Привет мир!\n";
+
+	float A, B, C, D, X, Y;
+
+	cout << "Введите число A больше нуля =";
+	cin >> A;
+
+	cout << "Введите число B больше нуля =";
+	cin >> B;
+
+	cout << "Введите число C больше нуля =";
+	cin >> C;
+
+	cout << "Введите число D больше нуля =";
+	cin >> D;
+	Mean(A, B, X, Y);
+	cout << "AMean=" << X << " GMean=" << Y << "\n";
+	Mean(A, C, X, Y);
+	cout << "AMean=" << X << " GMean=" << Y << "\n";
+	Mean(A, D, X, Y);
+	cout << "AMean=" << X << " GMean=" << Y << "\n";
+
+system("pause");
+return 0;
+	}
+*/
+
+
+/*
+//Proc4 Описать процедуру TrianglePS(a, P, S), вычисляющую по стороне a
+//равностороннего треугольника его периметр P = 3·a и площадь S = (a^2)*√3 / 4
+//(a — входной, P и S — выходные параметры; все параметры являются вещественными)
+//С помощью этой процедуры найти периметры и площади
+//трех равносторонних треугольников с данными сторонами
+
+int TrianglePS(float a, float &P, float &S) {
+	P = 3 * a;
+	S = pow(a, 2) * sqrt(3)/ 4;
+	return P, S;
+}
+
+
+int main() {
+	setlocale(LC_ALL, "russian");
+	std::cout << "Привет мир!\n";
+
+	float a, P, S;
+	int i = 3;
+	while (i > 0) {
+		i--;
+		cout << "\nВведите число А =";
+		cin >> a;
+		TrianglePS(a, P, S);
+		cout << "P=" << P << " S=" << S << endl;
+	}
+
+
+	system("pause");
+	return 0;
+}
+*/
+
+
+
+/*
+//Proc16
+
+// Описать функцию Sign(X) целого типа, возвращающую для вещественного 
+// числа X следующие значения : −1, если X < 0; 0, если X = 0; 1, если X > 0.
+// С помощью этой функции найти значение выражения Sign(A) + Sign(B)
+// для данных вещественных чисел A и B.
+
+
+int Sign(float &X) {
+	if (X < 0) {
+		X = -1;
+	}
+	else if (X == 0) {
+		X = 0;
+	}
+	else {
+		X = 1;
+	}
+
+	return X;
+}
+
+
+int main() {
+	setlocale(LC_ALL, "russian");
+	std::cout << "Привет мир!\n";
+
+	float A, B, X;
+
+	cout << "Введите число A =";
+	cin >> A;
+	cout << "\n";
+
+	cout << "Введите число B =";
+	cin >> B;
+	cout << "\n";
+
+	X = Sign(A) + Sign(B);
+	cout << "\nX=" << X;
+
+	system("pause");
+	return 0;
+}
+*/
+
+
+
+//Proc17
+// Описать функцию RootsCount(A, B, C) целого типа, определяющую
+// количество корней квадратного уравнения A * x^2 + B*x + C = 0 
+// (A, B, C — вещественные параметры, A 6 = 0).С ее помощью найти количество корней
+// для каждого из трех квадратных уравнений с данными коэффициентами.
+// Количество корней определять по значению дискриминанта :
+// D = B^2 − 4·A·C.
+
+
+/*
+int RootsCount(float A, float B, float C) {
+	float D, X;
+	D = pow(B, 2) - (4 * A * C);
+	if (D > 0) {
+		X = 2;
+	}
+	else if (D == 0) {
+		X = 1;
+	}
+	else {
+		X = 0;
+	}
+	return X;
+}
+
+
+int main() {
+	setlocale(LC_ALL, "russian");
+	std::cout << "Привет мир!\n";
+
+	float A, B, C;
+	int X;
+
+	cout << "Введите число A=";
+	cin >> A;
+	cout << "\n";
+
+	cout << "Введите число B=";
+	cin >> B;
+	cout << "\n";
+
+	cout << "Введите число C=";
+	cin >> C;
+	cout << "\n";
+
+	X = RootsCount(A, B, C);
+
+	cout << "\n Количество корней X=" << X << endl;
+
+	system("pause");
+	return 0;
+}
+*/
+
+/*
+//Proc18
+// Описать функцию CircleS(R) вещественного типа, находящую площадь 
+// круга радиуса R(R — вещественное).С помощью этой функции
+// найти площади трех кругов с данными радиусами.
+// Площадь круга радиуса R вычисляется по формуле S = π·R^2
+// В качестве значения π использовать 3.14.
+
+
+int CircleS(float R) {
+	float const pi = 3.14;
+	float S = pi * pow(R, 2);
+	return S;
+}
+
+
+int main() {
+	setlocale(LC_ALL, "russian");
+	std::cout << "Привет мир!\n";
+
+	float R;
+
+	cout << "Введите число R=";
+	cin >> R;
+	cout << "\n";
+
+	cout << "\n" << CircleS(R) << endl;
+
+	system("pause");
+	return 0;
+}
+*/
+
+//Proc19
+// Описать функцию RingS(R1, R2) вещественного типа, находящую площадь кольца, 
+// заключенного между двумя окружностями с общим центром
+// и радиусами R1 и R2 (R1 и R2 — вещественные, R1 > R2). 
+// С ее помощью найти площади трех колец, для которых даны внешние и внутренние радиусы.
+// Воспользоваться формулой площади круга радиуса R : S = π·R^2 
+// В качестве значения π использовать 3.14.
+
+
+int RingS(float R1, float R2) {
+	float const pi = 3.14;
+	float S = abs((3.14 * pow(R1, 2)) - (3.14 * pow(R2, 2)));
+	return S;
+}
+
+
+int main() {
+	setlocale(LC_ALL, "russian");
+	std::cout << "Привет мир!\n";
+
+	float R1, R2, S;
+
+	cout << "Введите число R2=";
+	cin >> R2;
+	cout << "\n";
+
+	cout << "Введите число которое больше чем R2 R1=";
+	cin >> R1;
+
+	S = RingS(R1, R2);
+	cout << "\nПлощадь S=" << S << endl;
+
+	system("pause");
+	return 0;
+}
+
+
