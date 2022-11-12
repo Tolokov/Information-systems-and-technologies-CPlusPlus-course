@@ -1,0 +1,180 @@
+#include "stdafx.h"
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+void PowerA3(float a, float &b){
+	b = a*a*a;}
+void PowerA234(float a, float &b, float &c , float &d)
+	{
+	b = a*a;
+	c = a*a*a;
+	d = a*a*a*a;
+	}
+void Mean(float x, float y, float &m , float &l)
+	{
+	m = (x + y) /2;
+	 l= sqrt(x*y);
+
+	}
+void TrianglePS(float a, float &p , float &s)
+	{
+	p = 3 * a;
+	s = (a * a ) * sqrt(3./4.);
+
+	}
+
+int Sign(int x){
+	int s = 0 ;
+	if (x<0)	s =  -1;
+	if (x==0)s =  0;
+	if (x>0) s =  1;
+
+	cout <<s << endl;
+	return s ;
+}
+
+int RootsCount(float A, float B, float C)
+{
+	float D;
+	int p = 0;
+	D = pow(B, 2) - 4 * A * C;
+	if (D > 0) p = 2;
+	if (D == 0) p = 1;
+	if (D < 0) p = 0;
+	return p;
+}
+
+
+float CircleS(float R)
+{
+	float S;
+	S = 3.14 * pow(R, 2);
+	return S;
+}
+
+
+float RingS(float R1, float R2)
+{
+	float S;
+	S = (3.14 * pow(R1, 2)) - (3.14 * pow(R2, 2));
+	return S;
+}
+
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{ 
+// Proc16
+		float  a,b ;
+	cin >> a;
+		cin >> b;
+		int t = Sign(a) + Sign(b);
+		cout << t << endl ;
+// Proc17
+
+	/*
+	float A, B, C;
+	int p;
+	for (int i = 0; i < 3; i++)
+	{
+		cout << "Vvedite A B C" << endl;
+		cin >> A >> B >> C;
+		count = RootsCount(A, B, C);
+		cout << "Yravnenie vida:" << endl
+			<< "(" << A << ")x^2 + (" << B << ")x + (" << C << ") = 0" << endl
+			<< "Kolichestvo korney =" << p   << endl;
+	}
+	*/
+// Proc18
+	
+	/*
+	float R, S;
+	for (int i = 0; i < 3; i++)
+	{
+		cout << "Vvedite radius "; cin >> R;
+		S = CircleS(R);
+		cout << "krug s radiusom" << R << " S = " << S << endl;
+	}
+	*/
+// Proc19
+
+	/*
+	float R1, R2, S;
+	for (int i = 0; i < 3; i++)
+	{
+		cout << "vvedit dlinu vnutr and vneshnego "; cin >> R1 >> R2;
+		if (R1 < R2) 
+		{
+			cout << "Oshibka" << endl;
+			continue;
+		}
+		S = RingS(R1, R2);
+		cout << "kolco s radiusov R1 =  " << R1 << "  R2 = " << R2 << " S = " << S << endl << endl;
+	}
+	*/
+
+
+
+	/*proc 1*/
+	/*float p=0 , a ;
+for ( int i = 0; i < 5 ; i++ ){
+	cout << " Vvedite x " << endl ;
+cin >> a ;
+	PowerA3(a, p );
+	cout << p << endl;
+}*/
+	/*proc 2*/
+	/*float p=0 , a,b,c,d ;
+for ( int i = 0; i < 5 ; i++ ){
+	cout << " Vvedite x " << endl ;
+cin >> a ;
+	PowerA234(a, b,c,d);
+	cout << " vtoraya stepen " << endl ;
+	cout << b << endl;
+	cout << " tretia stepen " << endl ;
+	cout << c << endl;
+	cout << " chetvertaya stepen " << endl ;
+	cout << d << endl;
+}*/
+	/*proc 3*/
+	/*float p=0 , a,b,c,d ,x,y,m,l;
+	cout << " Vvedite a " << endl ;
+cin >> a ;
+	cout << " Vvedite b " << endl ;
+cin >> b ;
+	cout << " Vvedite c " << endl ;
+cin >> c ;
+	cout << " Vvedite d " << endl ;
+cin >> d ;
+	Mean(a, b,m,l);
+	cout << " srednee arifmeticheskoe AB " << endl ;
+	cout << m << endl;
+	cout << " srednee geometrichescoe AB" << endl ;
+	cout << l << endl;
+	Mean(a, c,m,l);
+	cout << " srednee arifmeticheskoe AC " << endl ;
+	cout << m << endl;
+	cout << " srednee geometrichescoe AC" << endl ;
+	cout << l << endl;
+	Mean(a, d,m,l);
+	cout << " srednee arifmeticheskoe AD " << endl ;
+	cout << m << endl;
+	cout << " srednee geometrichescoe AD" << endl ;
+	cout << l << endl;*/
+	/*proc 4*/
+//	float p=0 , a,c,d ;
+//for ( int i = 0; i < 3 ; i++ ){
+//	cout << " Vvedite a " << endl ;
+//cin >> a ;
+//	TrianglePS(a,c,d);
+//	cout << " perimetr " << endl ;
+//	cout << c << endl;
+//	cout << " ploshad" << endl ;
+//	cout << d << endl;
+//}
+	/*proc 4*/
+
+	system ("pause");
+	return 0;
+}
