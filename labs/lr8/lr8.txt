@@ -1,0 +1,171 @@
+
+
+// Laba8.cpp: определяет точку входа для консольного приложения.
+//
+
+//#include "stdafx.h"
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+
+//#include <clocale>
+//#include <time.h>
+//#include <stdlib.h>
+
+
+
+using namespace std;
+
+
+// Программа 1. Ввод данных с клавиатуры
+/*
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	std::cout << "Привет мир!\n";
+
+	const int size = 10;
+	int X[size];
+	int N;
+	cout << "Введите количество элементов N =";
+	cin >> N;
+
+	for (int i = 0; i < N; i++) {
+		cout << "Введите " << i << "-ый элемент X" << endl;
+		cin >> X[i];
+	}
+	cout << "В строчку введены с клавиатуры: ";
+	for (int i = 0; i < N; i++) {
+		cout << X[i] << " ";
+	}
+	cout << "\n";
+
+	cout << "В столбец введены с клавиатуры: ";
+	for (int i = 0; i < N; i++) {
+		cout << "\n" << X[i];
+	}
+	cout << "\n";
+
+	std::ofstream out;
+	out.open("F:\\file.txt"); 
+	if (out.is_open())
+	{
+		out << "В строчку введены с клавиатуры: ";
+		for (int i = 0; i < N; i++) {
+			out << X[i] << " ";
+		}
+		out << "\n";
+
+		out << "В столбец введены с клавиатуры: ";
+		for (int i = 0; i < N; i++) {
+			out << "\n" << X[i];
+		}
+	}
+	system("pause");
+	return 0;
+}
+*/
+
+// генерация значений случайно
+/*
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	std::cout << "Привет мир!\n";
+
+	const int size = 10;
+	int X[size];
+	int N;
+	cout << "Введите количество элементов N =";
+	cin >> N;
+
+	for (int i = 0; i < N; i++) {
+		X[i] = rand();
+	}
+
+	cout << "В строчку сгенерированы: ";
+	for (int i = 0; i < N; i++) {
+		cout << X[i] << " ";
+	}
+	cout << "\n";
+
+	cout << "В столбец сгенерированы: ";
+	for (int i = 0; i < N; i++) {
+		cout << "\n" << X[i];
+	}
+	cout << "\n";
+
+	std::ofstream out;
+	out.open("F:\\file_rand.txt"); 
+	if (out.is_open())
+	{
+		out << "В строчку сгенерированы: ";
+		for (int i = 0; i < N; i++) {
+			out << X[i] << " ";
+		}
+		out << "\n";
+
+		out << "В столбец сгенерированы: ";
+		for (int i = 0; i < N; i++) {
+			out << "\n" << X[i];
+		}
+	}
+	system("pause");
+	return 0;
+}
+*/
+
+
+//Чтение из файла
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	std::cout << "Привет мир!\n";
+
+	const int size = 10;
+	int X[size];
+	int N;
+	cout << "Введите количество элементов N =";
+	cin >> N;
+
+	fstream fin("F:\\array.txt");
+
+	if (fin)
+		for (int i = 0; i < N; i++) {
+			fin >> X[i];
+			cout << "Прочитан элемент " << X[i] << endl;
+		}
+	
+	cout << "Из файла прочитаны: ";
+	for (int i = 0; i < N; i++) {
+		cout << X[i] << " ";
+	}
+	cout << "\n";
+
+	cout << "Из файла прочитаны: ";
+	for (int i = 0; i < N; i++) {
+		cout << "\n" << X[i];
+	}
+	cout << "\n";
+
+	std::ofstream out;
+	out.open("F:\\file_out.txt");
+	if (out.is_open())
+	{
+		out << "Из файла прочитаны: ";
+		for (int i = 0; i < N; i++) {
+			out << X[i] << " ";
+		}
+		out << "\n";
+
+		out << "Из файла прочитаны: ";
+		for (int i = 0; i < N; i++) {
+			out << "\n" << X[i];
+		}
+	}
+	system("pause");
+	return 0;
+}
+
+
