@@ -1,0 +1,50 @@
+
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <math.h>
+
+using namespace std;
+
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	std::cout << "Привет мир!\n";
+
+	double Bn = -5, Bk = 5, delB = 2.5, Cn = 2.5, Ck = 5.5, delC = 1;
+	double X, Y, A, B, C;
+
+	cout << "Введите число A=";
+	cin >> A;
+	cout << endl;
+
+	if (A < 0) {
+		cout << "\nРешений не может быть т.к. А меньше или равен нулю";
+		exit(1);
+	}
+	B = Bn;
+	C = Cn;
+
+	cout << "B" << "\t" << "C" << "\t" << "X" << "\t" << "Y" << "\t" << endl;
+
+	while (-5 <= B && B <= 5) {
+		do {
+			X = (abs(B * C) * pow(A - B, 2) ) / (4 * (B * C + 1));
+			Y = (A * pow(C, 2) - pow(X, 2)) / A * abs(X + B * C);
+			X = round(X * 100) / 100;
+			Y = round(Y * 100) / 100;
+			cout << B << "\t" << C << "\t" << X << "\t" << Y << "\t" << endl;
+			C = C + delC;
+		} 
+		while (2.5 <= C && C <= 5.5);
+
+		B = B + delB;
+		C = Cn;
+	}
+	cout << "\nПрограмма успешно выполнена и будет завершена";
+	exit(1);
+	
+	system("pause");
+	return 0;
+}
