@@ -1,0 +1,441 @@
+
+#include <iostream>
+#include <time.h>
+#include <iomanip>
+
+using namespace std;
+
+const int k = 4;
+const int m = 4;
+
+
+/*
+//1
+
+void Get(int x[][k], int N) {
+	for (int i = 0; i < N; i++)
+		for (int j = 0; j < N; j++)
+			cin >> x[i][j];
+}
+
+void Out(int x[][k], int N) {
+	for (int i = 0; i < k; i++) {
+		for (int j = 0; j < k; j++) {
+			cout << setw(5) << x[i][j];
+		}
+		cout << "\n";
+	}
+}
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+
+	int A[m][k];
+
+	Get(A, m);
+	Out(A, m);
+}
+*/
+
+
+
+/*
+//2
+
+void Get(int x[][k], int N) {
+	for (int j = 0; j < N; j++)
+		for (int i = 0; i < N; i++)
+			cin >> x[i][j];
+}
+void Out(int x[][k], int N) {
+	for (int j = 0; j < k; j++) {
+		for (int i = 0; i < k; i++) {
+			cout << setw(5) << x[i][j];
+		}
+		cout << "\n";
+	}
+}
+
+int main()
+{
+
+	setlocale(LC_ALL, "Russian");
+
+	int A[m][k];
+
+	Get(A, m);
+	Out(A, m);
+}
+*/
+
+
+/*
+//3
+void Get(int x[][k], int N) {
+	for (int j = 0; j < N; j++)
+		for (int i = 0; i < N; i++)
+			cin >> x[i][j];
+}
+void Out(int x[][k], int N) {
+	for (int j = 0; j < k; j++) {
+		for (int i = 0; i < k; i++) {
+			cout << setw(5) << x[i][j];
+		}
+		cout << "\n";
+	}
+}
+
+void Ran(int X[][k], int N, int a, int b) {
+	for (int i = 0; i < N; i++)
+		for (int j = 0; j < k; j++)
+			X[i][j] = a + rand() / 7;
+}
+
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	
+	int A[m][k];
+	int B[5][k];
+
+	Ran(B, 5, -10, 10);
+	cout << "\n" << " Таблица " << "\n"; 
+	Out(B, 5);
+	
+	Get(A, m);
+	Out(A, m);
+}
+*/
+
+
+
+
+/*
+ //4
+void Get(int x[][k], int N) {
+	for (int j = 0; j < N; j++)
+		for (int i = 0; i < N; i++)
+			cin >> x[i][j];
+}
+
+void Out(int x[][k], int N) {
+	for (int j = 0; j < k; j++) {
+		for (int i = 0; i < k; i++) {
+			cout << setw(5) << x[i][j];
+		}
+		cout << "\n";
+	}
+}
+
+void Out2(int x[][k], int N) {
+	for (int i = 0; i < k; i++) {
+		for (int j = 0; j < k; j++) {
+			cout << setw(5) << x[i][j];
+		}
+		cout << "\n";
+	}
+}
+
+void Ran(int x[][k], int N, int a, int b) {
+	for (int i = 0; i < N; i++)
+		for (int j = 0; j < k; j++)
+			x[i][j] = a + rand() / 7;
+}
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+
+	int B[5][k];
+
+	Ran(B, 5, -10, 10);
+	cout << "\n" << "||||||||||||||||||||||||||||" << "\n"; Out(B, 5);
+	cout << "\n" << "||||||||||||||||||||||||||||" << "\n"; Out2(B, 5);
+}
+*/
+
+
+/*
+// 1
+void Get(int x[][k], int N) {
+	for (int i = 0; i < N; i++)
+		for (int j = 0; j < N; j++)
+			cin >> x[i][j];
+}
+
+void Out(int x[][k], int N) {
+	for (int i = 0; i < k; i++) {
+		for (int j = 0; j < k; j++) {cout << setw(5) << x[i][j];}
+		cout << "\n";
+	}
+}
+
+void Out2(int x[][k], int N) {
+    for (int i = 0; i < k; i++) {
+        for (int j = 0; j < k; j++) {cout << setw(5) << x[i][j];}
+        cout << "\n";
+    }
+}
+
+void Ran(int x[][k], int N, int a, int b) {
+	for (int i = 0; i < N; i++)
+		for (int j = 0; j < k; j++)
+			x[i][j] = a + rand() / 7;
+}
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	srand(time(NULL));
+	
+	int B[5][k];
+	int S = 0;
+
+	Ran(B, 5, -10, 10);
+	cout << "\n" << "||||||||||||||||||||||||||||" << "\n"; Out(B, 5);
+	
+	for (int i = 0; i < 5; i++)
+		for (int j = 0; j < k; j++)
+			S += B[i][j];
+	cout << " S = " << S << "\n";
+}
+*/
+
+
+/*
+// 2
+void Get(int x[][k], int N) {
+	for (int i = 0; i < N; i++)
+		for (int j = 0; j < N; j++)
+			cin >> x[i][j];
+}
+void Out(int x[][k], int N) {
+	for (int i = 0; i < k; i++) {
+		for (int j = 0; j < k; j++) {
+			cout << setw(5) << x[i][j];
+		}
+		cout << "\n";
+	}
+}
+
+void Ran(int x[][k], int N, int a, int b) {
+	for (int i = 0; i < N; i++)
+		for (int j = 0; j < k; j++)
+			x[i][j] = a + rand() / 7;
+}
+
+int main()
+{
+	srand(time(NULL));
+	setlocale(LC_ALL, "Russian");
+
+	int B[5][k];
+	
+	Ran(B, 5, -10, 10);
+
+	cout << "\n" << " ||||||||||||||||||| " << "\n"; Out(B, 5);
+	int P = 1;
+	for (int i = 0; i < k; i++)
+		for (int j = 0; j < k; j++)
+			P *= B[i][j];
+	cout << " P = " << P << "\n";
+}
+*/
+
+/*
+// 3
+void Get(int x[][k], int N) {
+	for (int i = 0; i < N; i++)
+		for (int j = 0; j < N; j++)
+			cin >> x[i][j];
+}
+
+void Out(int x[][k], int N) {
+	for (int i = 0; i < k; i++) {
+		for (int j = 0; j < k; j++) {
+			cout << setw(5) << x[i][j];
+		}
+		cout << "\n";
+	}
+}
+
+void Ran(int x[][k], int N, int a, int b) {
+	for (int i = 0; i < N; i++)
+		for (int j = 0; j < k; j++)
+			x[i][j] = a + rand() / 7;
+}
+int main()
+{
+	srand(time(NULL));
+	setlocale(LC_ALL, "Russian");
+
+	int B[5][k];
+	int count = 0;
+
+	Ran(B, 5, -10, 10);
+	cout << "\n" << " |||||||||||||| " << "\n"; Out(B, 5);
+
+	for (int i = 0; i < k; i++)
+		for (int j = 0; j < k; j++)
+			if (B[i][j] > 0)
+				count++;
+	cout << " count = " << count << "\n";
+}
+*/
+
+
+
+/*
+ // 4
+
+void Get(int x[][k], int N) {
+	for (int i = 0; i < N; i++)
+		for (int j = 0; j < N; j++)
+			cin >> x[i][j];
+}
+void Out(int x[][k], int N) {
+	for (int i = 0; i < k; i++) {
+		for (int j = 0; j < k; j++) {
+			cout << setw(5) << x[i][j];
+		}
+		cout << "\n";
+	}
+}
+
+void Ran(int x[][k], int N, int a, int b) {
+	for (int i = 0; i < N; i++)
+		for (int j = 0; j < k; j++)
+			x[i][j] = a + rand() / 7;
+}
+
+int main()
+{
+	srand(time(NULL));
+	setlocale(LC_ALL, "Russian");
+
+	int B[5][k];
+	int S = 0;
+
+	Ran(B, 5, -10, 10);
+	cout << "\n" << " |||||||||||||| " << "\n"; Out(B, 5);
+	
+	for (int i = 0; i < k; i++)
+		S += B[i][i];
+	cout << " S = " << S << "\n";
+}
+*/
+
+
+
+/*
+// 5
+
+void Out(int x[][k], int N) {
+	for (int i = 0; i < k; i++) {
+		for (int j = 0; j < k; j++) {
+			cout << setw(5) << x[i][j];
+		}
+		cout << "\n";
+	}
+}
+
+void Ran(int x[][k], int N, int a, int b) {
+	for (int i = 0; i < N; i++)
+		for (int j = 0; j < k; j++)
+			x[i][j] = a + rand() / 7;
+}
+
+int main()
+{
+	srand(time(NULL));
+	setlocale(LC_ALL, "Russian");
+
+	int B[4][k];
+	int S = 1;
+	int s;
+
+	Ran(B, 4, -10, 10);
+	cout << "\n" << " |||||||||||||| " << "\n";
+	Out(B, 4);
+	
+	cout << "Введите индекс "; 
+	cin >> s;
+
+	for (int i = 0; i < 4; i++) {
+		if (B[i][s] % 2 != 0) {
+			S *= B[i][s];
+		}
+	}
+	cout << " S = " << S << "\n";
+}
+*/
+
+
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <iostream>
+
+using namespace std;
+
+
+int main(int argc, char* argv[])
+{
+	// 1-условно "стенки лабиринта"
+	// 2-"правильный путь, выход из лабиринта"
+	// 0-"ложный путь"
+	// инициализаци¤ двумерного массива
+	int mas[33][20] = {
+{1,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},
+{1,1,2,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1,},
+{1,1,2,1,1,1,1,1,1,1,1,1,0,1,0,1,0,1,0,1,},
+{1,1,2,1,1,1,1,1,1,1,1,1,0,1,0,1,0,1,0,1,},
+{1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,},
+{1,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,},
+{1,1,2,1,1,1,1,1,1,1,0,1,1,1,0,0,0,1,0,1,},
+{1,1,2,0,0,0,0,0,0,1,0,0,0,0,0,1,1,1,0,1,},
+{1,1,2,1,1,1,1,1,0,1,1,1,1,1,0,0,1,1,0,1,},
+{1,1,2,1,1,1,0,1,0,0,0,0,0,0,0,0,0,1,0,1,},
+{1,1,2,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,0,1,},
+{1,1,2,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,},
+{1,1,2,1,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,},
+{1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,},
+{1,1,2,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,},
+{1,1,2,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,},
+{1,1,2,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,0,1,},
+{1,1,2,1,1,0,1,1,1,1,1,1,0,1,0,1,0,0,1,1,},
+{1,1,2,1,1,0,1,0,1,0,0,1,0,0,0,1,0,0,0,1,},
+{1,1,2,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,},
+{1,1,2,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},
+{1,1,2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,},
+{1,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,},
+{1,1,2,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,1,},
+{1,1,2,1,0,1,0,0,1,1,1,1,1,1,0,1,0,1,0,1,},
+{1,1,2,1,1,1,0,0,1,0,0,0,0,1,0,1,0,1,0,1,},
+{1,1,2,0,0,0,0,1,1,0,1,1,1,1,0,1,1,1,0,1,},
+{1,1,2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,},
+{1,1,2,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,},
+{1,1,2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,},
+{1,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,},
+{1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,},
+{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,} };
+	// два цикла - внутренний и внешний, осуществл¤ющие обращение к каждому элементу массива
+	for (int i = 0; i < 33; i++) //обход по строкам
+	{
+		for (int j = 0; j < 20; j++)// обход по столбцам
+			if (mas[i][j] == 1)
+			{
+				// вывести два раза символ (номер которого 176 в таблице ASCII) в консоль
+				cout << static_cast<char>(176);
+				//cout << static_cast<char>(176);
+			}
+			else
+				cout << " "; // вывести два пробела
+		cout << "\n";
+	}
+	system("pause");
+	return 0;
+}
+
