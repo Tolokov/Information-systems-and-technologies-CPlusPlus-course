@@ -1,0 +1,291 @@
+
+
+/*
+// Пример 1
+#include <stdio.h>
+int main(void)
+{
+    char line[21]; // room for 20 chars + '\0'
+    gets_s(line, 20);
+    puts(line);
+}
+*/
+
+// Пример 2
+/*
+#include <iostream>
+#include <stdio.h>
+int main()
+{
+    char str[] = "this is string - "; // объявление и инициализация строки
+    std::cout << "Enter the string: ";
+    char in_str[500]; // строковый массив для ввода
+    //функция gets_s() считывает все введённые символы с пробелами до тех пор, пока //не будет нажата клавиша Enter
+
+    gets_s(in_str);
+    //вывод строкового значения
+    std::cout << str << in_str << std::endl;
+    system("pause");
+    return 0;
+}
+*/
+
+/*
+// Пример 3
+#include <iostream>
+#include <stdio.h>
+#include <string>
+#include <Windows.h>
+
+using namespace std;
+
+int main()
+{
+    char string[] = "this is string - *";
+    cout << "Enter the string: ";
+    char in_string[500];	// строковый массив для ввода
+    cin.getline(in_string, 500);
+    cout << string << in_string << std::endl; // вывод строкового значения 
+
+    system("pause"); 
+    return 0;
+
+}
+*/
+
+/*
+// Пример 4
+#include <iostream>
+#include <stdio.h>
+#include <string>
+#include <Windows.h>
+
+using namespace std;
+
+int main() {
+
+    string str;
+    // массив строк
+    string vec[10];
+
+    int size = 0;
+    cout << "Enter 4 string: " << endl;
+    while ((getline(cin, str, ';') && (size < 3)))
+    {
+        vec[size] = str;
+        cout << vec[size] << endl;
+        size++;
+    }
+
+    for (int i = 0; i < size; i++) 
+    { 
+        cout << vec[i] << endl;
+    }
+
+    system("pause");
+
+    return 0;
+
+}
+*/
+
+/*
+#include <iostream>
+#include <string.h>
+#include <Windows.h>
+
+using namespace std;
+
+const int M = 80;
+
+int main()
+{
+    setlocale(LC_ALL, "russian");
+    SetConsoleCP(1251);
+
+    char first[M];
+    char second[M];
+    cout << "Введите первую строку: ";
+    cin.getline(first, M);
+    cout << "Введите вторую строку: ";
+    cin.getline(second, M);
+    cout << "До копирования строки были ";
+    if (strcmp(first, second)) cout << "не ";
+    cout << "одинаковыми.\n";
+    strcpy_s(first, second);
+    cout << "После копирования строки стали ";
+    if (strcmp(first, second)) cout << "не ";
+    cout << "одинаковыми.\n";
+    strcat_s(first, second);
+    cout << "После конкатенации первая строка равна: ";
+    cout << first;
+    return 0;
+}
+*/
+/*
+#include <iostream>
+#include <string.h>
+#include <Windows.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "russian");
+    SetConsoleCP(1251);
+
+    char* np, st[80], ch;
+    int count = 0; // количество символов
+    gets_s(st); // вводим строку
+    puts(st); // выводим строку
+    cout << "Введите символ";
+    ch = getchar();
+    np = strchr(st, ch); // функция возвращает указатель на 1ый найденный в строке символ или 
+    // NULL, т.е. указатель движется по символам строки
+    while (np != NULL)
+    {
+        count++;
+        np++;
+        np = strchr(np, ch);
+    }
+
+    // другой вариант реализации цикла
+    // while (np++) { count++; cout << count; np = strchr (np, ch); }
+}
+*/
+
+/*
+#include <iostream>
+#include <stdio.h>
+#include <string>
+#include <stdlib.h>
+#include <Windows.h>
+
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "russian");
+    SetConsoleCP(1251);
+    char str[500];
+    gets_s(str);
+
+    double a = atof(str);
+    cout << endl  << "Преобразование в вещественное " << a << endl;
+
+    double b = atoi(str);
+    cout << endl << "Преобразование в целое " << b << endl;
+
+}
+*/
+
+/*
+// Преобразовать число (вещественное, целое) в строку
+
+#include <iostream>
+#include <stdio.h>
+#include <string>
+#include <stdlib.h>
+#include <Windows.h>
+
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "russian");
+    SetConsoleCP(1251);
+
+    char b[9] = "789,789";
+
+    double d = stof(b);
+    cout << endl << "Преобразование в вещественное " << d << endl;
+
+    int c = atol(b);
+    cout << endl  << "Преобразование в целое  " << c << endl;
+}
+*/
+
+
+
+// Подсчитать, сколько слов в строке начинается на букву "к". В строке слова разделены пробелами.
+
+
+#include <iostream>
+#include <stdio.h>
+#include <string>
+#include <Windows.h>
+
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "russian");
+    SetConsoleCP(1251);
+
+    // в водить в ручную
+    //char string[] = "Текст в котором содержится несколько слов начинающихся на букву к";
+    char str[500];
+    //char string[] = " ";
+    gets_s(str);
+    std::cout << str << std::endl;
+
+    int count = 0;
+    for (int i = 1; i < strlen(str); i++) {
+        if (str[i - 1] == ' ') {
+            if ((str[i] == 'к') || (str[i] == 'К')) {
+                count++;
+            }
+        }
+    }
+
+    cout << endl << count << endl;
+    system("pause");
+    return 0;
+}
+*/
+
+
+ 
+
+ 
+/*
+//Задача №1 
+
+
+//Задача №2
+//Дана строка. Выяснить, является ли эта строка десятичной записью вещественного числа.
+
+#include <iostream>
+#include <stdio.h>
+#include <string>
+#include <Windows.h>
+
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "russian");
+    SetConsoleCP(1251);
+
+    char str[500];
+    //char string[] = " ";
+    gets_s(str);
+
+    int count = 0;
+
+    for (int i = 0; i < strlen(str); i++) {
+        if (str[i] == '0' || str[i] == '1' ||
+            str[i] == '2' || str[i] == '3' || str[i] == '4' ||
+            str[i] == '5' || str[i] == '6' || str[i] == '7' ||
+            str[i] == '8' || str[i] == '9' || str[i] == '.')
+        {
+            count++;
+        }
+    }
+    if (strlen(str) == count) {
+        cout << endl << "Введенная строка является вещенственным числом" << endl;
+    }
+    else {
+        cout << endl << "Введенная строка не является вещенственным числом" << endl;
+    }
+
+    system("pause");
+    return 0;
+}
+
