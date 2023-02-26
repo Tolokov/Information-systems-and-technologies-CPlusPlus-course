@@ -12,21 +12,21 @@ void hello_world()
 	cout << "Hello World!\n";
 }
 
-// Çàïîëíåíèå ìàññèâà ñëó÷àéíûìè çíà÷åíèÿìè
+// Ã‡Ã Ã¯Ã®Ã«Ã­Ã¥Ã­Ã¨Ã¥ Ã¬Ã Ã±Ã±Ã¨Ã¢Ã  Ã±Ã«Ã³Ã·Ã Ã©Ã­Ã»Ã¬Ã¨ Ã§Ã­Ã Ã·Ã¥Ã­Ã¨Ã¿Ã¬Ã¨
 void random(int mas[], int n) {
 
 	for (int i = 0; i < n; i++)
 		mas[i] = rand();
 }
 
-// Âûâîä íà ýêðàí ìàññèâà
+// Ã‚Ã»Ã¢Ã®Ã¤ Ã­Ã  Ã½ÃªÃ°Ã Ã­ Ã¬Ã Ã±Ã±Ã¨Ã¢Ã 
 void print_mas(int mas[], int n) {
 
 	for (int i = 0; i < n; i++)
 		cout << mas[i] << " ";
 }
 
-// Ññóììèðîâàíèå ìàññèâà ñ èñïîëüçîâàíèåì ïðåäèêàòíûõ ôóíêöèé
+// Ã‘Ã±Ã³Ã¬Ã¬Ã¨Ã°Ã®Ã¢Ã Ã­Ã¨Ã¥ Ã¬Ã Ã±Ã±Ã¨Ã¢Ã  Ã± Ã¨Ã±Ã¯Ã®Ã«Ã¼Ã§Ã®Ã¢Ã Ã­Ã¨Ã¥Ã¬ Ã¯Ã°Ã¥Ã¤Ã¨ÃªÃ Ã²Ã­Ã»Ãµ Ã´Ã³Ã­ÃªÃ¶Ã¨Ã©
 int sum_mas(int mas[], int n, int a, int b, bool (*pred) (int i, int a, int b)) {
 	int sum = 0;
 	cout << endl;
@@ -37,13 +37,13 @@ int sum_mas(int mas[], int n, int a, int b, bool (*pred) (int i, int a, int b)) 
 		}
 	return sum;
 }
-// Ôóíêöèÿ çàäàþùàÿ äèàïïàçîí äëÿ âûâîäà èíäåêñîâ
+// Ã”Ã³Ã­ÃªÃ¶Ã¨Ã¿ Ã§Ã Ã¤Ã Ã¾Ã¹Ã Ã¿ Ã¤Ã¨Ã Ã¯Ã¯Ã Ã§Ã®Ã­ Ã¤Ã«Ã¿ Ã¢Ã»Ã¢Ã®Ã¤Ã  Ã¨Ã­Ã¤Ã¥ÃªÃ±Ã®Ã¢
 bool diapazon(int i, int a, int b)
 {
 	return i >= a && i < b;
 }
 
-// Óäàëåíèå ýëåìåíòà èç ìàññèâà, ñî ñäâèãîì
+// Ã“Ã¤Ã Ã«Ã¥Ã­Ã¨Ã¥ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  Ã¨Ã§ Ã¬Ã Ã±Ã±Ã¨Ã¢Ã , Ã±Ã® Ã±Ã¤Ã¢Ã¨Ã£Ã®Ã¬
 void delete_elem(int mas[], int n, int index) {
 	cout << endl;
 	
@@ -53,7 +53,7 @@ void delete_elem(int mas[], int n, int index) {
 }
 
 
-//  Äîáàâëåíèå ýëåìåíòà ê ìàññèâó, ñî ñäâèãîì
+//  Ã„Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¥ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  Ãª Ã¬Ã Ã±Ã±Ã¨Ã¢Ã³, Ã±Ã® Ã±Ã¤Ã¢Ã¨Ã£Ã®Ã¬
 void add_elem(int mas[], int n, int index, int elem) {
 
 	cout << endl;
@@ -69,7 +69,7 @@ void add_elem(int mas[], int n, int index, int elem) {
 
 }
 
-// Ñîðòèðîâêà ìàññèâà 1 ïî âîçðàñòàíèþ
+// Ã‘Ã®Ã°Ã²Ã¨Ã°Ã®Ã¢ÃªÃ  Ã¬Ã Ã±Ã±Ã¨Ã¢Ã  1 Ã¯Ã® Ã¢Ã®Ã§Ã°Ã Ã±Ã²Ã Ã­Ã¨Ã¾
 
 void bubble_sort(int mas[], int n) {
 	cout << endl << "Bubble sort:";
@@ -85,7 +85,7 @@ void bubble_sort(int mas[], int n) {
 	}
 }
 
-// Ñîðòèðîâêà ìàññèâà 2 Ñîðòèðîâêà âûáîðîì, ïî óáûâàíèþ
+// Ã‘Ã®Ã°Ã²Ã¨Ã°Ã®Ã¢ÃªÃ  Ã¬Ã Ã±Ã±Ã¨Ã¢Ã  2 Ã‘Ã®Ã°Ã²Ã¨Ã°Ã®Ã¢ÃªÃ  Ã¢Ã»Ã¡Ã®Ã°Ã®Ã¬, Ã¯Ã® Ã³Ã¡Ã»Ã¢Ã Ã­Ã¨Ã¾
 
 void selection_sort(int mas[], int n) {
 	
@@ -111,7 +111,7 @@ void selection_sort(int mas[], int n) {
 	}
 }
 
-// Ñîðòèðîâêà ìàññèâà 3 Ñîðòèðîâêà âñòàâêàìè
+// Ã‘Ã®Ã°Ã²Ã¨Ã°Ã®Ã¢ÃªÃ  Ã¬Ã Ã±Ã±Ã¨Ã¢Ã  3 Ã‘Ã®Ã°Ã²Ã¨Ã°Ã®Ã¢ÃªÃ  Ã¢Ã±Ã²Ã Ã¢ÃªÃ Ã¬Ã¨
 
 void insertion_sort(int mas[], int n) 
 {
@@ -133,7 +133,7 @@ void insertion_sort(int mas[], int n)
 	}
 }
 
-// Ëèíåéíûé ïîèñê ìèíèìàëüíîãî çíà÷åíèÿ
+// Ã‹Ã¨Ã­Ã¥Ã©Ã­Ã»Ã© Ã¯Ã®Ã¨Ã±Ãª Ã¬Ã¨Ã­Ã¨Ã¬Ã Ã«Ã¼Ã­Ã®Ã£Ã® Ã§Ã­Ã Ã·Ã¥Ã­Ã¨Ã¿
 int linerial_search_min(int mas[], int n) {
 	int index = 0, min_value = mas[0];
 
@@ -147,7 +147,7 @@ int linerial_search_min(int mas[], int n) {
 	return index;
 }
 
-// Ëèíåéíûé ïîèñê ìàêñèìàëüíîãî çíà÷åíèÿ
+// Ã‹Ã¨Ã­Ã¥Ã©Ã­Ã»Ã© Ã¯Ã®Ã¨Ã±Ãª Ã¬Ã ÃªÃ±Ã¨Ã¬Ã Ã«Ã¼Ã­Ã®Ã£Ã® Ã§Ã­Ã Ã·Ã¥Ã­Ã¨Ã¿
 int linerial_search_max(int mas[], int n) {
 	int index = 0, min_value = mas[0];
 
@@ -161,7 +161,7 @@ int linerial_search_max(int mas[], int n) {
 	return index;
 }
 
-// Àëãîðèòì áèíàðíîãî ïîèñêà. 
+// Ã€Ã«Ã£Ã®Ã°Ã¨Ã²Ã¬ Ã¡Ã¨Ã­Ã Ã°Ã­Ã®Ã£Ã® Ã¯Ã®Ã¨Ã±ÃªÃ . 
 int binary_search(int mas[], int n, int elem) {
 	int mid = n / 2;
 	while (elem != mas[mid]) {
@@ -210,7 +210,7 @@ bool kvadratnie(int elem)
 	return false;
 }
 
-// Ñîõðàíåíèå ìàññèâà â ôàéë
+// Ã‘Ã®ÃµÃ°Ã Ã­Ã¥Ã­Ã¨Ã¥ Ã¬Ã Ã±Ã±Ã¨Ã¢Ã  Ã¢ Ã´Ã Ã©Ã«
 void save_to_file(int mas[], int n) {
 	ofstream fout("C:\\data\\file.txt");
 	for (int i = 0; i < n; i++)
@@ -221,7 +221,7 @@ void save_to_file(int mas[], int n) {
 	fout.close();
 }
 
-// ×òåíèå ìàññèâà èç ôàéëà
+// Ã—Ã²Ã¥Ã­Ã¨Ã¥ Ã¬Ã Ã±Ã±Ã¨Ã¢Ã  Ã¨Ã§ Ã´Ã Ã©Ã«Ã 
 void read_to_file(int mas[], int n) {
 	string line;
 	ifstream fin("C:\\data\\file.txt");
@@ -235,7 +235,7 @@ void read_to_file(int mas[], int n) {
 	fin.close();
 }
 
-// Ïîèñê ìèíèìàëüíîãî ýëåìåíòà ïî ìîäóëþ â ìàññèâå
+// ÃÃ®Ã¨Ã±Ãª Ã¬Ã¨Ã­Ã¨Ã¬Ã Ã«Ã¼Ã­Ã®Ã£Ã® Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã  Ã¯Ã® Ã¬Ã®Ã¤Ã³Ã«Ã¾ Ã¢ Ã¬Ã Ã±Ã±Ã¨Ã¢Ã¥
 int v_11_find_min_elem(int mas[], int n) {
 	int min_index = 0;
 	int min_value = abs(mas[0]);
@@ -248,7 +248,7 @@ int v_11_find_min_elem(int mas[], int n) {
 	return min_index;
 }
 
-// Ñóììà ýëåìåíòîâ ñëåâà îò îòðèöàòåëüíîãî 
+// Ã‘Ã³Ã¬Ã¬Ã  Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã®Ã¢ Ã±Ã«Ã¥Ã¢Ã  Ã®Ã² Ã®Ã²Ã°Ã¨Ã¶Ã Ã²Ã¥Ã«Ã¼Ã­Ã®Ã£Ã® 
 int v_11_sum_elems_left_otricat(int mas[], int n) {
 	int sum_values = 0;
 	for (int i = 0; i < n; i++) {
